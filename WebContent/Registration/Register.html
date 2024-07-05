@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Register.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="Validation.js"></script>
+    <style src="Register.js">
+        @import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="register" id="form" method="post">
+            <h1>Create account</h1>
+            <div class="input-box">
+                <input type="text" name="Cname" placeholder="Name" id="username" >
+                <i class='bx bxs-user' ></i>
+                <div class="error"></div>
+            </div>
+            <div class="input-box">
+                <input type="text" name="Mobile" placeholder="Mobile number" id="mobile" >
+                <i class='bx bxs-phone' ></i>
+                <div class="error"></div>
+            </div>
+            <div class="input-box">
+                <input type="email" name="emailid" placeholder="E-mail" id="email" >
+                <i class='bx bxs-envelope' ></i>
+                <div class="error"></div>
+            </div>
+            <div class="input-box">
+                <input type="password" name="fpassword" placeholder="Password" id="password" >
+                <i class='bx bxs-lock-alt' ></i>
+                <div class="error"></div>
+            </div>
+            <div class="input-box">
+                <input type="password" name="Cpassword" placeholder="Confirm Password" id="password2" >
+                <i class='bx bxs-lock-alt' ></i>
+                <div class="error"></div>
+            </div>
+            <div class="remember-forgot">
+                <label ><input type="checkbox" name="Remember"> Remember me</label>
+            </div>
+            <button type="submit" name="btn" class="btn">Create</button>
+            <div class="register-link">
+                <p>Already Registered? <a href="../Login/Login.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        const registerButton = document.querySelector('.btn');
+        const wrapper = document.querySelector('.wrapper');
+
+        registerButton.addEventListener('click', function() {
+            wrapper.classList.add('animate');
+        });
+    </script>
+</body>
+</html>
