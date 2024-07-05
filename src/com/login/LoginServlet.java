@@ -14,6 +14,9 @@ public class LoginServlet extends HttpServlet {
           String username=req.getParameter("username");
    	      String password=req.getParameter("password");
    	      PrintWriter out=res.getWriter();
-   	      out.println("<h1>you have Successfully logged in</h1>");
+//   	      res.setContentType("text/html");
+//   	      out.println("<html><body>"+username+"<body></html>");
+   	      res.sendRedirect(req.getContextPath()+"/Home/Home.html");
+   	      //out.println("<h1>you have Successfully logged in</h1>");
          }
 }
